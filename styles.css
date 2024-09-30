@@ -6,6 +6,11 @@ html, body {
     background-color: #f4f4f4;
 }
 
+a {
+    text-decoration: none;
+    color: #16368a;
+}
+
 body {
     display: flex;
     flex-direction: column; /* Organiza os elementos em uma coluna: header, main, footer */
@@ -43,7 +48,7 @@ h1 {
 
 .about h2, .cta h2 {
     font-size: 2rem;
-    color: #1E90FF; /* Azul da logo */
+    color: #16368a; /* Azul da logo */
 }
 
 .about p, .cta p {
@@ -59,6 +64,7 @@ h1 {
     font-size: 1.2rem;
     border-radius: 50px;
     cursor: pointer;
+    gap: 10px;
     transition: background-color 0.3s;
 }
 
@@ -68,7 +74,7 @@ h1 {
 
 footer {
     background-color: #f7d320; /* Azul da logo */
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
     margin-top: auto; /* Empurra o rodapé para o final da página */
@@ -93,8 +99,8 @@ footer p {
     }
 
     .btn-whatsapp {
-        padding: 10px 20px;
-        font-size: 1rem;
+        padding: 5px 10px;
+        font-size: 0.8rem;
     }
     
     .cta-buttons {
