@@ -1,0 +1,109 @@
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da página */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna: header, main, footer */
+    min-height: 100vh; /* O body terá no mínimo a altura total da tela */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1; /* Faz o container principal expandir para preencher o espaço restante */
+}
+
+header {
+    background-color: #f7d320; /* Azul baseado na logo */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo-img {
+    max-width: 250px;
+    
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #FF4500; /* Laranja da logo */
+}
+
+.about, .cta {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.about h2, .cta h2 {
+    font-size: 2rem;
+    color: #1E90FF; /* Azul da logo */
+}
+
+.about p, .cta p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Efeito de hover no botão */
+}
+
+footer {
+    background-color: #f7d320; /* Azul da logo */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empurra o rodapé para o final da página */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .about h2, .cta h2 {
+        font-size: 1.6rem;
+    }
+
+    .about p, .cta p {
+        font-size: 1rem;
+    }
+
+    .btn-whatsapp {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: row; /* Alinha os botões lado a lado */
+        justify-content: center; /* Centraliza os botões */
+    }
+
+    .btn-whatsapp {
+        flex: 1 1 45%; /* Os botões ocupam aproximadamente 45% da largura da tela */
+        max-width: none; /* Remove a limitação de largura nos botões para que possam se ajustar ao espaço */
+    }
+}
