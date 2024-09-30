@@ -41,12 +41,12 @@ h1 {
     color: #FF4500; /* Laranja da logo */
 }
 
-.about, .cta {
+.about, .cta  {
     margin: 40px 0;
     text-align: center;
 }
 
-.about h2, .cta h2 {
+.about h2, .cta h2, .news h2 {
     font-size: 2rem;
     color: #16368a; /* Azul da logo */
 }
@@ -90,7 +90,7 @@ footer p {
         font-size: 2rem;
     }
 
-    .about h2, .cta h2 {
+    .about h2, .cta h2, .news h2 {
         font-size: 1.6rem;
     }
 
@@ -99,7 +99,7 @@ footer p {
     }
 
     .btn-whatsapp {
-        padding: 5px 10px;
+        padding: 10px 10px;
         font-size: 0.8rem;
     }
     
@@ -111,5 +111,70 @@ footer p {
     .btn-whatsapp {
         flex: 1 1 45%; /* Os botões ocupam aproximadamente 45% da largura da tela */
         max-width: none; /* Remove a limitação de largura nos botões para que possam se ajustar ao espaço */
+    }
+}
+/* Seção de Notícias */
+.news {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 25%; /* Diminui o tamanho do card */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.news-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.news-card h3 {
+    font-size: 1.4rem; /* Ajuste do tamanho da fonte */
+    color: #16368a; 
+    margin-bottom: 5px;
+}
+
+.news-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.news-card strong {
+    color: #333;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .news-card {
+        width: 45%; /* Ajusta a largura para telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .news-card {
+        width: 80%; /* Ajusta a largura para telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-card {
+        width: 100%; /* Ajusta para ocupar toda a largura da tela em dispositivos móveis */
+        padding: 15px; /* Maior espaçamento em telas menores */
+    }
+
+    .news-card h3 {
+        font-size: 1.2rem; /* Diminui o tamanho da fonte em dispositivos menores */
     }
 }
