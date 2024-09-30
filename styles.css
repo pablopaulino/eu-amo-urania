@@ -99,7 +99,7 @@ footer p {
     }
 
     .btn-whatsapp {
-        padding: 10px 10px;
+        padding: 15px 10px;
         font-size: 0.8rem;
     }
     
@@ -164,17 +164,17 @@ footer p {
 
 @media (max-width: 768px) {
     .news-card {
-        width: 80%; /* Ajusta a largura para telas pequenas */
+        width: 70%; /* Ajusta a largura para telas pequenas */
     }
 }
 
 @media (max-width: 480px) {
     .news-card {
-        width: 100%; /* Ajusta para ocupar toda a largura da tela em dispositivos móveis */
+        width: 65%; /* Ajusta para ocupar toda a largura da tela em dispositivos móveis */
         padding: 15px; /* Maior espaçamento em telas menores */
     }
 
     .news-card h3 {
-        font-size: 1.2rem; /* Diminui o tamanho da fonte em dispositivos menores */
+        font-size: 1rem; /* Diminui o tamanho da fonte em dispositivos menores */
     }
 }
