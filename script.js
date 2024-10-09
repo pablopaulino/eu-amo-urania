@@ -3,14 +3,19 @@
 // Array de objetos com as notícias
 const noticias = [
     {
-        titulo: "Eleições 06/10",
+        titulo: "Prefeito Eleito",
         categoria: "Política",
-        descricao: "Nesse domingo das 7h às 16h, é dia de votar na Deise da Saúde e no Dr Orlando 55."
+        descricao: "Ivan Vitorelli foi eleito prefeito de Urânia."
     },
     {
         titulo: "Onda de Calor",
         categoria: "Clima",
         descricao: "A temperatura máxima deve alcançar 41°C , mantendo a cidade sob alerta laranja para onda de calor."
+    },
+    {
+        titulo: "Chuva",
+        categoria: "Clima",
+        descricao: "O clima permanece instável, com temperaturas variando de 22°C a 35°C e 67% de possibilidade de chuvas."
     }
 ];
 
