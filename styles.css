@@ -171,6 +171,52 @@ footer p {
     color: #333;
 }
 
+/* Estilizando o botão flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância da lateral direita da página */
+    background-color: #25d366; /* Cor do botão (verde do WhatsApp) */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-decoration: none;
+    animation: pulse 2s infinite; /* Animação de pulsar */
+    transition: all 0.3s ease-in-out; /* Transição suave para o hover */
+  }
+  
+  /* Efeito pulsante contínuo */
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Tamanho normal */
+    }
+    50% {
+      transform: scale(1.1); /* Aumenta 10% */
+    }
+    100% {
+      transform: scale(1); /* Volta ao tamanho original */
+    }
+  }
+  
+  /* Estilizando a imagem do ícone */
+  .whatsapp-float img {
+    width: 50px; /* Tamanho do ícone */
+    height: 50px;
+  }
+  
+  /* Efeito ao passar o mouse (hover) */
+  .whatsapp-float:hover {
+    background-color: #128c7e; /* Cor mais escura quando o botão é pressionado */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Sombra maior ao passar o mouse */
+    transform: scale(1.15); /* Aumenta o tamanho ao passar o mouse */
+    animation: none; /* Remove o efeito de pulsar durante o hover */
+  }
+  
+
 /* Media Queries para responsividade */
 @media (max-width: 1200px) {
     .news-card {
@@ -178,9 +224,18 @@ footer p {
     }
 
     .news-container {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+
+    .whatsapp-float img {
+        width: 30px; /* Tamanho do ícone */
+        height: 30px;
+      }
+
+      .whatsapp-float {
+        padding: 15px;
+      }
 }
 
 @media (max-width: 768px) {
@@ -188,10 +243,20 @@ footer p {
         width: 70%; /* Ajusta a largura para telas pequenas */
     }
     .news-container {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-}
+    
+    .whatsapp-float img {
+        width: 30px; /* Tamanho do ícone */
+        height: 30px;
+      }
+
+      .whatsapp-float {
+        padding: 15px;
+      }
+
+    }
 
 @media (max-width: 480px) {
     .news-card {
@@ -203,7 +268,21 @@ footer p {
         font-size: 1rem; /* Diminui o tamanho da fonte em dispositivos menores */
     }
     .news-container {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+
+    .whatsapp-float img {
+        width: 30px; /* Tamanho do ícone */
+        height: 30px;
+      }
+
+      .whatsapp-float {
+        padding: 15px;
+      }
+
+   
 }
+
+
+  
