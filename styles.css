@@ -14,7 +14,7 @@ a {
 body {
     display: flex;
     flex-direction: column; /* Organiza os elementos em uma coluna: header, main, footer */
-    min-height: 100vh; /* O body terá no mínimo a altura total da tela */
+    min-height: 100vh; 
 }
 
 .container {
@@ -70,8 +70,8 @@ h1 {
 }
 
 .btn-whatsapp {
-    background-color: #25D366; /* Verde do WhatsApp */
-    color: white;
+    background-color: #f7d320; /* Verde do WhatsApp */
+    color: #16368a;
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -82,8 +82,46 @@ h1 {
 }
 
 .btn-whatsapp:hover {
-    background-color: #128C7E; /* Efeito de hover no botão */
+    background-color: #16368a; /* Efeito de hover no botão */
+    color: #f7d320;
 }
+
+.news-banner {
+    background-color: #16368a; /* Azul baseado na logo */
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin: 40px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.news-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-news {
+    background-color: #f7d320; /* Cor de destaque do botão */
+    color: #16368a; /* Texto azul */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-news:hover {
+    background-color: #ffc107; /* Cor mais clara no hover */
+    color: #fff;
+}
+
 
 footer {
     background-color: #f7d320; /* Azul da logo */

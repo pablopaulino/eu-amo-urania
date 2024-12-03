@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Eu Amo Urânia">
     <meta property="og:description" content="Tudo sobre nossa cidade!">
-    <meta property="og:image" content="https://unsplash.com/pt-br/fotografias/tMDkK6sW7_0"> <!-- Certifique-se de que a imagem está no mesmo diretório -->
-    <meta property="og:url" content="https://www.euamourania.site/"> <!-- Corrigido para o formato correto -->
+    <meta property="og:image" content="https://unsplash.com/pt-br/fotografias/tMDkK6sW7_0">
+    <meta property="og:url" content="https://www.euamourania.site/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Eu Amo Urânia">
-    <meta name="twitter:description" content="Noticias e entretenimento sobre nossa cidade!">
-    <meta name="twitter:image" content="https://unsplash.com/pt-br/fotografias/tMDkK6sW7_0"> <!-- Imagem local -->
-    <meta name="twitter:url" content="hhttps://www.euamourania.site/">
+    <meta name="twitter:description" content="Notícias e entretenimento sobre nossa cidade!">
+    <meta name="twitter:image" content="https://unsplash.com/pt-br/fotografias/tMDkK6sW7_0">
+    <meta name="twitter:url" content="https://www.euamourania.site/">
     <title>Eu Amo Urânia</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -29,45 +29,42 @@
         </div>
     </header>
 
-
     <main>
         <div class="container">
             <section class="about">
-                <h2>Já visitou Borboletário de Urânia?</h2>
+                <h2>Já visitou o Borboletário de Urânia?</h2>
                 <div class="container-img">
                     <img src="AD3A1763-min (1).jpg" alt="">
                     <img src="3Q2A7854-min-min.jpg" alt="">
                     <img src="1V4A4044-min.jpg" alt="">
                 </div>
-                <p>Visite o Borboletário Municipal de Urânia, o primeiro da Região Noroeste Paulista! Inaugurado em
-                    2022, o espaço oferece uma experiência encantadora para conhecer diversas espécies de borboletas em
-                    um ambiente natural. Venha se encantar e aprender mais sobre a importância dessas fascinantes
+                <p>Visite o Borboletário Municipal de Urânia, o primeiro da Região Noroeste Paulista! Inaugurado em 2022,
+                    o espaço oferece uma experiência encantadora para conhecer diversas espécies de borboletas em um
+                    ambiente natural. Venha se encantar e aprender mais sobre a importância dessas fascinantes
                     criaturas!</p>
-                <a href="https://borboletario-municipal-de-urania.reservio.com/" target="_blank"><button
-                        class="btn-whatsapp">Agende sua visita!</button></a>
+                <a href="https://borboletario-municipal-de-urania.reservio.com/" target="_blank">
+                    <button class="btn-whatsapp">Agende sua visita!</button>
+                </a>
             </section>
-
-            <section class="news-banner">
-                <div class="banner-content">
-                    <h2>Confira as Últimas Notícias de Urânia!</h2>
-                    <p>Fique por dentro de tudo o que acontece em nossa cidade!</p>
-                    <a href="news.html" class="btn-news">Acesse as Notícias</a>
-                </div>
-            </section>
-            
 
             <section class="cta">
                 <h2>Nos Acompanhe!</h2>
                 <p>Entre em nosso canal de WhatsApp para obter mais informações ou nos siga no Instagram para receber
                     novidades!</p>
-                <a href="https://whatsapp.com/channel/0029VapPdlLGpLHTXQELk210" target="_blank"><button
-                        class="btn-whatsapp">Entre no Canal</button></a>
-                <a href="links.html" target="_blank"><button class="btn-whatsapp">Nosso
-                        Links</button></a>
+                <a href="https://whatsapp.com/channel/0029VapPdlLGpLHTXQELk210" target="_blank">
+                    <button class="btn-whatsapp">Entre no Canal</button>
+                </a>
+                <a href="links.html" target="_blank">
+                    <button class="btn-whatsapp">Nosso Links</button>
+                </a>
             </section>
         </div>
 
-
+        <h1>Notícias da Cidade</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar notícias..." oninput="filterNews()">
+        </div>
+        <div id="newsContainer"></div>
     </main>
 
     <a href="https://wa.me/5517997155714" class="whatsapp-float" target="_blank">
@@ -80,7 +77,6 @@
             <p>&copy; <span id="year"></span> Eu Amo Urânia - Todos os direitos reservados</p>
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>

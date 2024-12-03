@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes da Notícia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+    }
+    .content {
+      padding: 20px;
+    }
+    h1 {
+      margin: 0 0 10px;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Notícia - Detalhes</h1>
+  </header>
+  <main id="newsDetails">
+    <!-- Detalhes da notícia serão carregados aqui -->
+  </main>
+  <script>
+    // Obtém o ID da URL
+    const params = new URLSearchParams(window.location.search);
+    const newsId = params.get('id');
+
+    // Simulação de array (substituiria por JSON real em projetos grandes)
+    const newsArray = [
+      {
+        id: 1,
+        title: "Borboletário de Urânia Comemora 2 Anos",
+        image: "https://borboletariodeurania.com.br/wp-content/uploads/2022/12/AD3A1763-min.jpg",
+        content: "Neste mês de dezembro, o Borboletário de Urânia celebra seus dois anos de existência, marcando um importante capítulo na preservação ambiental e no turismo sustentável da cidade. Inaugurado oficialmente em 3 de dezembro de 2022, o espaço se tornou um símbolo da conscientização ambiental no noroeste paulista, sendo o primeiro Borboletário da região. O projeto foi idealizado em 2020 pela arquiteta Carolina Braga, como parte de seu Trabalho de Conclusão de Curso (TCC), e apresentado ao prefeito Márcio Arjol, que, junto à sua equipe, decidiu transformar a ideia em realidade. Em outubro de 2021, foi anunciada a construção do Borboletário, com a entrega da obra prevista para o segundo semestre de 2022. O local foi inaugurado com o objetivo de promover a criação e preservação de diversas espécies de borboletas, fundamentais para o equilíbrio ecológico. O Impacto do Borboletário na Comunidade. Ao longo desses dois anos, o Borboletário se consolidou não apenas como uma opção de lazer, mas também como um centro de educação ambiental. O local atraiu moradores de Urânia e de cidades vizinhas, além de escolas e grupos de pesquisa interessados no estudo das borboletas e seu ciclo de vida. Durante as visitas, os visitantes aprendem sobre as fases da vida desses insetos e sua importância para o meio ambiente, enquanto são guiados por monitores especializados. O espaço, que funciona de quarta-feira a domingo, recebe visitantes que podem explorar o jardim repleto de plantas que atraem as borboletas, além de placas informativas que explicam o ciclo de vida dos insetos e as espécies de plantas que compõem o ambiente.",
+        date: "2024-12-03",
+        author: "Equipe Eu Amo Urânia"
+      },
+      {
+        id: 2,
+        title: "Caminhoneiro é rendido e amarrado durante assalto a carga de defensivos agrícolas em Urânia (SP)",
+        image: "https://costalestenews.com.br/wp-content/uploads/2024/11/Messenger_creation_040B36C2-A0C5-49BE-9BAC-2A2FF72E0749.webp",
+        content: "Na madrugada desta quinta-feira (28), um caminhoneiro foi vítima de um assalto violento em Urânia, no interior de São Paulo. O alvo dos criminosos era uma carga de defensivos agrícolas, avaliada em R$ 2,4 milhões, que estava sendo transportada pelas margens da rodovia Euclides da Cunha. De acordo com informações da Polícia Militar, o caminhoneiro foi rendido por criminosos armados, que o amarraram dentro do próprio caminhão. Enquanto isso, os assaltantes transferiam toda a carga para outro veículo. O caminhoneiro conseguiu se soltar das amarras e, rapidamente, acionou a polícia. A mobilização das autoridades foi imediata e, em um cerco pelas rodovias da região, dois suspeitos foram localizados em fuga, em Vitória Brasil. Eles foram abordados e presos em flagrante, sendo levados para a delegacia. A carga roubada foi recuperada pela polícia e devolvida ao caminhoneiro. No entanto, outros membros da quadrilha conseguiram escapar em um carro e, segundo a polícia, estão armados com as armas utilizadas no crime. As investigações apontam que os fugitivos são naturais de Limeira (SP). Até o momento, os outros suspeitos não foram localizados, e a polícia continua em busca dos criminosos. A Polícia Militar segue investigando o caso e reforça o alerta à população sobre a atuação de quadrilhas especializadas em roubos de carga na região.",
+        date: "2024-11-28",
+        author: "Equipe Eu Amo Urânia"
+      },
+      {
+        id: 3,
+        title: "Ivan Vitorelli é Eleito Prefeito de Urânia (SP) nas Eleições 2024",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzIYe4Qddi7YE-3nNW_Dd3VuRwInbiLhGknA&s",
+        content: "Ivan Vitorelli, do partido REPUBLICANOS, é o novo prefeito eleito de Urânia (SP). A eleição ocorreu em 6 de outubro, durante o 1º turno das Eleições 2024, e Vitorelli foi consagrado com 53,58% dos votos válidos. Ele assumirá o cargo de chefe do Executivo municipal a partir de 2025, com mandato até 2028. Vitorelli venceu a candidata Deise Da Saúde, que obteve 46,42% dos votos. No total, 5.855 eleitores participaram da votação em Urânia. O 1º turno contou com 5.642 votos válidos, além de 73 votos brancos e 140 votos nulos. Com essa vitória, Ivan Vitorelli se prepara para liderar a cidade nos próximos quatro anos, prometendo trabalhar em prol do desenvolvimento de Urânia e da melhoria da qualidade de vida da população.",
+        date: "2024-10-06",
+        author: "Equipe Eu Amo Urânia"
+      }
+    ];
+
+    // Ordena as notícias pela data (do mais recente para o mais antigo)
+    newsArray.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Busca os detalhes da notícia
+    const news = newsArray.find(item => item.id === Number(newsId));
+    const newsDetails = document.getElementById('newsDetails');
+
+    if (news) {
+      newsDetails.innerHTML = `
+        <img src="${news.image}" alt="${news.title}">
+        <div class="content">
+          <h1>${news.title}</h1>
+          <p class="meta">Por ${news.author} | ${news.date}</p>
+          <p>${news.content}</p>
+        </div>
+      `;
+    } else {
+      newsDetails.innerHTML = '<p>Notícia não encontrada.</p>';
+    }
+  </script>
+</body>
+</html>

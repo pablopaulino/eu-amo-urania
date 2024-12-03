@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Últimas Notícias de Urânia</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #f7d320;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2px;
+      flex: 1;
+    }
+
+    .logo-img {
+    max-width: 250px;
+    
+}
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .news-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .news-item {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .news-item img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+    .news-item .content {
+      flex: 1;
+    }
+    .news-item h2 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #333;
+    }
+    .news-item p {
+      font-size: 1em;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .news-item a {
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .news-item a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+    background-color: #f7d320; /* Azul da logo */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Empurra o rodapé para o final da página */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+    @media (max-width: 768px) {
+      .news-item {
+        flex-direction: column;
+        align-items: center;
+      }
+      .news-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" id="inicio">
+      <a href="#inicio">
+        <img src="URÂNIA (Banner para YouTube).png" alt="Logo Eu Amo Urânia" class="logo-img">
+      </a>
+    </div>
+  </header>
+  <main id="newsList">
+    <!-- Notícias serão carregadas aqui -->
+  </main>
+
+  <footer>
+    <div class="container">
+        <a href="mailto:euamourania@gmail.com">Entre em contato por e-mail</a>
+        <p>&copy; <span id="year"></span> Eu Amo Urânia - Todos os direitos reservados</p>
+    </div>
+</footer>
+  <script>
+    const newsArray = [
+      {
+        id: 1,
+        title: "Borboletário de Urânia Comemora 2 Anos",
+        image: "https://costalestenews.com.br/wp-content/uploads/2024/06/borboletario-entrada.png",
+        content: "Borboletário de Urânia celebra seus dois anos de existência, marcando um importante capítulo na preservação ambiental e no turismo sustentável da cidade.",
+        date: "2024-12-03",
+        author: "Equipe Eu Amo Urânia"
+      },
+      {
+        id: 2,
+        title: "Caminhoneiro é rendido e amarrado durante assalto a carga de defensivos agrícolas em Urânia (SP)",
+        image: "https://costalestenews.com.br/wp-content/uploads/2024/11/Messenger_creation_040B36C2-A0C5-49BE-9BAC-2A2FF72E0749.webp",
+        content: "Um caminhoneiro foi vítima de um assalto violento em Urânia, no interior de São Paulo.",
+        date: "2024-11-28",
+        author: "Equipe Eu Amo Urânia"
+      },
+      {
+        id: 3,
+        title: "Ivan Vitorelli é Eleito Prefeito de Urânia(SP)",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzIYe4Qddi7YE-3nNW_Dd3VuRwInbiLhGknA&s",
+        content: "Eleiçoes 2024",
+        date: "2024-10-06",
+        author: "Equipe Eu Amo Urânia"
+      }
+    ];
+    newsArray.sort((a, b) => new Date(b.date) - new Date(a.date));
+    const formatDate = dateStr => {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateStr).toLocaleDateString('pt-BR', options);
+    };
+    const newsList = document.getElementById('newsList');
+    newsArray.forEach(news => {
+      newsList.innerHTML += `
+        <div class="news-container">
+          <div class="news-item">
+            <img src="${news.image}" alt="Imagem de ${news.title}">
+            <div class="content">
+              <h2><a href="news-details.html?id=${news.id}">${news.title}</a></h2>
+              <p>${news.content}</p>
+              <a href="news-details.html?id=${news.id}">Leia mais</a>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+
+<script src="script.js"></script>
+</body>
+</html>
