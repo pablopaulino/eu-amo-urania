@@ -14,7 +14,7 @@
     }
 
     header {
-      background-color: #333;
+      background-color: #484950;
       color: #fff;
       padding: 15px 0;
       text-align: center;
@@ -58,7 +58,7 @@
 
 <body>
   <header>
-    <h1>Notícia - Detalhes</h1>
+    <h1>Notícias - Eu Amo Urânia</h1>
   </header>
   <main id="newsDetails">
     <!-- Detalhes da notícia serão carregados aqui -->
@@ -175,6 +175,24 @@
     } else {
       newsDetails.innerHTML = '<p>Notícia não encontrada.</p>';
     }
+
+    if (news) {
+  // Atualiza o título da página
+  document.title = news.title;
+
+  // Renderiza os detalhes da notícia
+  newsDetails.innerHTML = `
+    <img src="${news.image}" alt="${news.title}">
+    <div class="content">
+      <h1>${news.title}</h1>
+      <p class="meta">Por ${news.author} | ${news.date}</p>
+      <p>${news.content}</p>
+    </div>
+  `;
+} else {
+  document.title = "Notícia não encontrada";
+  newsDetails.innerHTML = '<p>Notícia não encontrada.</p>';
+}
   </script>
 </body>
 
