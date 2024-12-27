@@ -65,3 +65,24 @@ window.onload = carregarNoticias;
 const currentYear = new Date().getFullYear();
 // Insere o ano atual no elemento com id "year"
 document.getElementById('year').textContent = currentYear;
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Verificar se o usuário já aceitou os cookies
+    const cookieConsent = localStorage.getItem("cookieConsent");
+
+    if (!cookieConsent) {
+        // Se não houver consentimento, mostrar o banner
+        const cookieBanner = document.getElementById("cookie-banner");
+        cookieBanner.style.display = "block";
+    }
+
+    // Quando o usuário clicar no botão "Aceitar"
+    document.getElementById("accept-cookies").addEventListener("click", () => {
+        // Armazenar o consentimento no localStorage
+        localStorage.setItem("cookieConsent", "true");
+
+        // Ocultar o banner de cookies
+        const cookieBanner = document.getElementById("cookie-banner");
+        cookieBanner.style.display = "none";
+    });
+});
