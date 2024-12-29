@@ -67,6 +67,21 @@
       font-size: 1em;
       line-height: 1.6;
     }
+
+  .share-buttons a {
+  display: inline-block;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+.share-buttons a:hover {
+  opacity: 0.8;
+}
+
   </style>
 </head>
 
@@ -229,6 +244,16 @@
   document.title = "Notícia não encontrada";
   newsDetails.innerHTML = '<p>Notícia não encontrada.</p>';
 }
+
+newsDetails.innerHTML += `
+  <div class="share-buttons" style="margin-top: 20px; text-align: center;">
+    <p>Compartilhe esta notícia:</p>
+    <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title + ' - ' + window.location.href)}" target="_blank" style="margin-right: 10px; text-decoration: none; color: white; background: #25D366; padding: 10px 15px; border-radius: 5px;">WhatsApp</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" style="margin-right: 10px; text-decoration: none; color: white; background: #3b5998; padding: 10px 15px; border-radius: 5px;">Facebook</a>
+    <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(news.title)}&url=${encodeURIComponent(window.location.href)}" target="_blank" style="text-decoration: none; color: white; background: #1DA1F2; padding: 10px 15px; border-radius: 5px;">Twitter</a>
+  </div>
+`;
+
   </script>
 </body>
 
