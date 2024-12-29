@@ -18,6 +18,12 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9784159624415038"
      crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Detalhes da Notícia - Eu Amo Urânia">
+<meta property="og:description" content="Leia as últimas notícias de Urânia!">
+<meta property="og:image" content="URL_DA_IMAGEM_DA_NOTICIA">
+<meta property="og:url" content="URL_DA_PAGINA">
+<meta property="og:type" content="article">
+
   <title>Detalhes da Notícia</title>
   <style>
     body {
@@ -253,6 +259,32 @@ newsDetails.innerHTML += `
     <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(news.title)}&url=${encodeURIComponent(window.location.href)}" target="_blank" style="text-decoration: none; color: white; background: #1DA1F2; padding: 10px 15px; border-radius: 5px;">Twitter</a>
   </div>
 `;
+
+if (news) {
+  document.title = news.title;
+
+  // Adiciona dinamicamente meta tags para Open Graph
+  const ogTitle = document.createElement('meta');
+  ogTitle.setAttribute('property', 'og:title');
+  ogTitle.setAttribute('content', news.title);
+  document.head.appendChild(ogTitle);
+
+  const ogDescription = document.createElement('meta');
+  ogDescription.setAttribute('property', 'og:description');
+  ogDescription.setAttribute('content', news.content.slice(0, 150) + '...');
+  document.head.appendChild(ogDescription);
+
+  const ogImage = document.createElement('meta');
+  ogImage.setAttribute('property', 'og:image');
+  ogImage.setAttribute('content', news.image);
+  document.head.appendChild(ogImage);
+
+  const ogUrl = document.createElement('meta');
+  ogUrl.setAttribute('property', 'og:url');
+  ogUrl.setAttribute('content', window.location.href);
+  document.head.appendChild(ogUrl);
+}
+
 
   </script>
 </body>
